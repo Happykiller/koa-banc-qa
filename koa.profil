@@ -1,0 +1,18 @@
+// Seed KoA — Ingénieur qualité (@qa) du cluster « banc », le banc de recette du framework agentique.
+{
+  "version": 1,
+  "nom": "koa-banc-qa",
+  "base": "debian",
+  "socle": "minimal",
+  "sudo": false,
+  "utilisateur": "agent",
+  "paquets": ["python3", "python3-pytest", "make"],
+  "bootstrap": "bootstrap.sh",
+  "repertoire": "~/koa-banc-qa",
+  "cluster": "banc",
+  "qg": "https://github.com/Happykiller/koa-banc-qg.git",
+  "livres": ["equipe/qa", "equipe/contrats", "equipe/table", "koa/architecture"],
+  "plugins": ["garde-fous@koa-skills", "koa@koa-skills"],
+  "agent": { "nature": "claude", "mode": "auto", "modele": "sonnet" },
+  "cloisonnement": { "interop": false, "montage_windows": false }
+}
